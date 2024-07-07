@@ -22,3 +22,11 @@ class User(BaseModel):
     middle_name: str | None = None
     gender: Gender
     role: List[Role]
+
+
+class UserUpdateRequest(BaseModel):
+    first_name: str | None = None
+    last_name: str | None = None
+    middle_name: str | None = None
+    gender: Gender | None = None
+    role: List[Role] | None = None
